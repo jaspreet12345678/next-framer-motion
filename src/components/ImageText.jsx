@@ -13,13 +13,12 @@ export default function ImageTextComponent() {
       if (index > fullText.length) {
         clearInterval(interval);
       }
-    }, 100); // Adjust the speed by changing the interval time
+    }, 100);
     return () => clearInterval(interval);
   }, [fullText]);
 
   return (
     <div style={{ margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px', maxWidth: '1280px' }}>
-      {/* Left side with images */}
       <div style={{ display: 'flex', width: '50%', gap: '20px', marginTop: '60px' }}>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -46,14 +45,12 @@ export default function ImageTextComponent() {
         </div>
       </div>
 
-      {/* Right side with text */}
       <div style={{ width: '50%', paddingLeft: '20px', marginTop: '60px' }}>
-        {/* Arrow and Title */}
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
           <h2 style={{ margin: 0, fontSize: '24px', textTransform: 'uppercase' }}>About Me</h2>
         </div>
 
-        {/* Text Content */}
+  
         <motion.p
           style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px', whiteSpace: 'pre-line' }}
           initial={{ opacity: 0 }}
@@ -70,8 +67,6 @@ export default function ImageTextComponent() {
           Modi tempora incidunt ut lao magnam aliquam quaerat voluptatem
           reprehenderit non numquam eius.
         </p>
-
-        {/* Download CV Button */}
         <motion.a
           href="/path/to/cv.pdf"
           download

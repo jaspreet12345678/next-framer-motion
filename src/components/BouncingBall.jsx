@@ -34,7 +34,7 @@ const loadingCircleVariants = {
     y: "50%",
   },
   end: {
-    y: ["50%", "150%", "50%"], // Use an array for continuous movement
+    y: ["50%", "150%", "50%"], 
   },
 };
 

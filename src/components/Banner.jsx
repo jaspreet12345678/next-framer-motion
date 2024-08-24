@@ -12,7 +12,6 @@ export default function Banner() {
                 maxWidth: '1280px',
             }}
         >
-            {/* Text Section (Left Side) */}
             <motion.div
                 className="absolute left-0 flex flex-col justify-center h-full w-1/2"
                 style={{ zIndex: 1, padding: '20px' }}
@@ -36,8 +35,6 @@ export default function Banner() {
                     Hire Me
                 </button>
             </motion.div>
-
-            {/* Image Section (Right Side) */}
             <motion.div
                 className="absolute right-0 flex items-center justify-center h-full w-1/2"
                 style={{ zIndex: 1 }}
@@ -46,7 +43,7 @@ export default function Banner() {
                 transition={{
                     duration: 2.5,
                     ease: 'linear',
-                    delay: 2.5, // Delay the image reveal until Superman passes
+                    delay: 2.5,
                 }}
             >
                 <img
@@ -55,7 +52,6 @@ export default function Banner() {
                     className="h-full max-w-full"
                 />
 
-                {/* Floating Award Section */}
                 <motion.div
                     className="absolute bottom-60 right-10 flex items-center p-3 bg-white shadow-lg rounded-lg"
                     style={{ zIndex: 2,width:'40%' }}
@@ -64,7 +60,7 @@ export default function Banner() {
                     transition={{
                         duration: 1.5,
                         ease: 'linear',
-                        delay: 4, // Ensure it appears after Superman has passed
+                        delay: 4,
                     }}
                 >
                     <i className="fas fa-users text-2xl text-blue-500 mr-3"></i>
@@ -80,7 +76,7 @@ export default function Banner() {
                     transition={{
                         duration: 1.5,
                         ease: 'linear',
-                        delay: 4, // Ensure it appears after Superman has passed
+                        delay: 4,
                     }}
                 >
                     <i className="fas fa-trophy text-2xl text-yellow-500 mr-3"></i>
@@ -89,11 +85,9 @@ export default function Banner() {
                     </span>
                 </motion.div>
             </motion.div>
-
-            {/* Moving Superman Image Section */}
             <motion.div
                 className="absolute flex items-center justify-center h-full w-full"
-                animate={{ x: ['-50%', '100%'] }}
+                animate={{ x: ['-100%', '100%'] }}
                 transition={{
                     duration: 5,
                     ease: 'linear',

@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import styles from './SkillPercentage.module.css'; // Ensure you have this CSS module
+import styles from './SkillPercentage.module.css';
 
 const Circle = ({ score, title }) => {
-  const percentage = parseInt(score, 10); // Convert score to number
+  const percentage = parseInt(score, 10);
 
   return (
     <div className={styles.circleContainer}>

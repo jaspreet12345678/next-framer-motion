@@ -12,6 +12,7 @@ import SkillPercentage from "@/components/SkillsPercentage";
 import ContactUs from "@/components/contact/ContactUs";
 import Feedback from "@/components/feedback";
 import Portfolio from "@/components/Portfolio";
+import Revalidate from "@/components/Revalidate";
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
