@@ -1,0 +1,58 @@
+/* feedback.module.css */
+.feedbackContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+  
+  .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .star {
+    font-size: 24px;
+    color: #ccc; /* Default star color */
+    margin: 0 2px;
+  }
+  
+  .shining {
+    animation: shine 1s infinite; /* Apply shining effect */
+  }
+  
+  @keyframes shine {
+    0% { color: #ccc; }
+    50% { color: #ffd700; }
+    100% { color: #ccc; }
+  }
+  

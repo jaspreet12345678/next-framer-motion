@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  max-width:1280px;
+  margin: 0 auto  ;
+}
+
+.circleContainer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  padding: 15px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.water {
+  width: 100%;
+  height: 100%; /* Ensure water fills the entire circle */
+  background: rgba(0, 0, 255, 0.3); /* Water color */
+  position: absolute;
+  bottom: 0; /* Align water to the bottom */
+  left: 0;
+  border-radius: 50%;
+  transform-origin: bottom; /* Ensure water fills from bottom */
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%); /* Mask to create wave effect */
+  mask-size: 100% 200%; /* Size of the mask for animation */
+  mask-position: 0% 100%; /* Initial mask position */
+  animation: wave 4s ease-in-out infinite; /* Add wave animation */
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
