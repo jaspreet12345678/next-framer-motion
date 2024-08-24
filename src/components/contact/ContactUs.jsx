@@ -1,7 +1,6 @@
-// ContactUs.js
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import styles from './contact.module.css'; // Import CSS Module
+import styles from './contact.module.css';
 import { useInView } from 'react-intersection-observer';
 
 const ContactUs = () => {
@@ -26,21 +25,24 @@ const ContactUs = () => {
         }
       });
     };
-
+  
     const observer = new IntersectionObserver(handleScroll, {
       threshold: 0.1 // Trigger when at least 10% of the component is in view
     });
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+  
+    const currentRef = containerRef.current; // Copy the current ref value
+  
+    if (currentRef) {
+      observer.observe(currentRef);
     }
-
+  
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [controls]);
+  
 
   return (
     <div
@@ -49,13 +51,6 @@ const ContactUs = () => {
       ref={containerRef}
     >
       <div className={styles.imageWrapper}>
-        {/* <motion.img
-          src="/images/2.jpeg"
-          alt="Contact Image"
-          className={styles.image}
-          animate={controls}
-          initial={{ scale: 1 }}
-        /> */}
         <motion.img
           ref={ref}
           src={inView ? "/images/2.jpeg" : ""}
